@@ -1,0 +1,3 @@
+[submodule "dejavu"]
+	path = dejavu
+	url = git@github.com:worldveil/dejavu.git

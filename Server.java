@@ -49,14 +49,11 @@ class Server {
 
 				String hexStr = bytesToHex(data);
 				System.out.println(hexStr.length());
-				PrintWriter out = new PrintWriter("/root/dejavu/input.txt");
+				PrintWriter out = new PrintWriter("./input.txt");
 				out.print(hexStr);
 				out.close();
 
-				String[] cmd = {
-						"/bin/bash",
-						"-c",
-						"cd /root/dejavu && python recognize_hex.py" };
+				String[] cmd = { "/bin/bash", "-c", "python recognize_hex.py" };
 				Process proc = Runtime.getRuntime().exec(cmd);
 
 				BufferedReader stdInput = new BufferedReader(
